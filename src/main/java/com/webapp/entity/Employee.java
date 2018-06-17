@@ -1,14 +1,24 @@
 package com.webapp.entity;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Employee {
+public class Employee implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
+	@Column
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public long id;
 	
@@ -30,11 +40,12 @@ public class Employee {
 		this.name = name;
 	}
 
-	public Employee(long id, String name) {
+	public Employee(String name) {
 		super();
-		this.id = id;
 		this.name = name;
 	}
 	
+	public Employee() {
+	}
 
 }
