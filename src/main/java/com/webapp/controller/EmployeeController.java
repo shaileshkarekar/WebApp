@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webapp.dto.EmployeeDto;
-import com.webapp.repository.EmployeeRepository;
 import com.webapp.services.impl.EmployeeServiceImpl;
 
 @RestController
