@@ -14,20 +14,20 @@ module.controller("EmployeeController", ["$scope", "EmployeeService",
 
         };
         
-      /*  $scope.saveUser = function() {
-
-            $scope.userDto.skillDtos = $scope.skills.map(skill => {
-
-                return {
-
-                    skillId: null,
-
-                    skillName: skill
-
-                };
-
-            });
-*/
+      /*
+		 * $scope.saveUser = function() {
+		 * 
+		 * $scope.userDto.skillDtos = $scope.skills.map(skill => {
+		 * 
+		 * return {
+		 * 
+		 * skillId: null,
+		 * 
+		 * skillName: skill
+		 *  };
+		 * 
+		 * });
+		 */
             EmployeeService.saveEmployee($scope.employeeDto).then(function() {
 
                 console.log("works");
@@ -46,7 +46,7 @@ module.controller("EmployeeController", ["$scope", "EmployeeService",
 
                 });
 
-                /*$scope.skills = [];*/
+                /* $scope.skills = []; */
 
                 $scope.employeeDto = {
 
@@ -54,7 +54,7 @@ module.controller("EmployeeController", ["$scope", "EmployeeService",
 
                     employeeName: null,
 
-                    /*skillDtos: []*/
+                    /* skillDtos: [] */
 
                 };
 
