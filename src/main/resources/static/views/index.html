@@ -15,13 +15,13 @@
 
 		<div class="row">
 
-			<label>User</label> <input type="text" ng-model="employeeDto.employeeName"
+			<label>Employee</label> <input type="text" ng-model="employeeDto.employeeName"
 				class="input-sm spacing" /><!--  <label>Skills</label> <input type="text"
 				ng-model="skills" ng-list class="input-sm custom-width spacing"
 				placeholder="use comma to separate skills" /> -->
 
 			<button ng-click="saveEmployee()" class="btn btn-sm btn-info">Save
-				User</button>
+				Employee</button>
 
 		</div>
 
@@ -29,7 +29,7 @@
 
 		<div class="row">
 
-			<p>{{allEmployee | json}}</p>
+			<p>{{allEmployees | json}}</p>
 
 		</div>
 

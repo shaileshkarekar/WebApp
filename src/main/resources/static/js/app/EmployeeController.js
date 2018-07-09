@@ -34,7 +34,7 @@ module.controller("EmployeeController", ["$scope", "EmployeeService",
 
                 EmployeeService.getAllEmployees().then(function(value) {
 
-                    $scope.allEmployee = value.data;
+                    $scope.allEmployees = value.data;
 
                 }, function(reason) {
 
