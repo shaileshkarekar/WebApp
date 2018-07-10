@@ -14,21 +14,7 @@ module.controller("EmployeeController", ["$scope", "EmployeeService",
 
         };
         
-      /*
-		 * $scope.saveUser = function() {
-		 * 
-		 * $scope.userDto.skillDtos = $scope.skills.map(skill => {
-		 * 
-		 * return {
-		 * 
-		 * skillId: null,
-		 * 
-		 * skillName: skill
-		 *  };
-		 * 
-		 * });
-		 */
-            EmployeeService.saveEmployee($scope.employeeDto).then(function() {
+        EmployeeService.saveEmployee($scope.employeeDto).then(function() {
 
                 console.log("works");
 

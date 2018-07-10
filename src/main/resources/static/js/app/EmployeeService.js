@@ -1,29 +1,22 @@
 'use strict'
 
-angular.module('app.services', []).factory('EmployeeService', ["$http", function($http) {
+angular.module('app.services', []).factory('EmployeeService',
+		[ "$http", function($http) {
 
-    var service = {};
+			var service = {};
 
-    /*service.getUserById = function(userId) {
+			service.getAllEmployees = function() {
 
-        var url = CONSTANTS.getUserByIdUrl + userId;
+				return $http.get(CONSTANTS.getAllEmployees);
 
-        return $http.get(url);
+			}
 
-    }
-*/
-    service.getAllEmployees = function() {
+			service.saveEmployee = function(employeeDto) {
 
-        return $http.get(employees);
+				return $http.post(CONSTANTS.saveEmployee, employeeDto);
 
-    }
+			}
 
-    service.saveEmployee = function(employeeDto) {
+			return service;
 
-        return $http.post(employees, employeeDto);
-
-    }
-
-    return service;
-
-}]);
+		} ]);
