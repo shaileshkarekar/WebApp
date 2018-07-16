@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
 public class Employee implements Serializable {
 
@@ -25,6 +26,9 @@ public class Employee implements Serializable {
 	@Column
 	private String name;
 
+	/**
+	 * @return
+	 */
 	public long getId() {
 		return id;
 	}
