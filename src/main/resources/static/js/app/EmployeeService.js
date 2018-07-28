@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('app.services', []).factory('EmployeeService',
-		[ "$http", "CONSTANTS", function($http) {
+		[ "$http", "CONSTANTS", function($http, CONSTANTS) {
 
 			var service = {};
 

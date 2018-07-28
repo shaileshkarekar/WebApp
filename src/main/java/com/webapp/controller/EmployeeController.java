@@ -27,6 +27,7 @@ public class EmployeeController {
 	@RequestMapping(value = Constants.SAVE_EMP, method= RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void addEmployee(@RequestBody EmployeeDto employeeDto) {
+		System.out.println("i m here");
 		employeeService.save(employeeDto);
 	}
 

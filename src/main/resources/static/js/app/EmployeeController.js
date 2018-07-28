@@ -56,7 +56,5 @@ module.controller("EmployeeController", ["$scope", "EmployeeService",
 
         }
 
-    }
-
-]);
+    ]);
 
