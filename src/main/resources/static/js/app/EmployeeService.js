@@ -12,7 +12,7 @@ angular.module('app.services', []).factory('EmployeeService',
 			}
 
 			service.saveEmployee = function(employeeDto) {
-
+                console.log("save employee")
 				return $http.post(CONSTANTS.saveEmployee, employeeDto);
 
 			}
