@@ -14,27 +14,14 @@ module.controller("EmployeeController", ["$scope", "EmployeeService",
 
         };
         
-        EmployeeService.saveEmployee($scope.employeeDto).then(function() {
+$scope.saveEmployee = function() {
+        
 
-                console.log("works");
-
-                EmployeeService.getAllEmployees().then(function(value) {
-
-                    $scope.allEmployees = value.data;
-
-                }, function(reason) {
-
-                    console.log("error occured");
-
-                }, function(value) {
-
-                    console.log("no callback");
-
-                });
-
-                /* $scope.skills = []; */
-
-                $scope.employeeDto = {
+                console.log($scope.employeeDto);
+				EmployeeService.saveEmployee($scope.employeeDto)
+				  $scope.allEmployees = EmployeeService.getAllEmployees();
+				  
+				   $scope.employeeDto = {
 
                     employeeId: null,
 
@@ -43,18 +30,10 @@ module.controller("EmployeeController", ["$scope", "EmployeeService",
                     /* skillDtos: [] */
 
                 };
+				
+}
 
-            }, function(reason) {
-
-                console.log("error occured");
-
-            }, function(value) {
-
-                console.log("no callback");
-
-            });
-
-        }
-
-    ]);
+        
+        
+  }]);
 

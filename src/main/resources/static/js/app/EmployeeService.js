@@ -12,9 +12,10 @@ angular.module('app.services', []).factory('EmployeeService',
 			}
 
 			service.saveEmployee = function(employeeDto) {
+			if(employeeDto.employeeId !==null && employeeDto.employeeName !== null){
                 console.log("save employee")
 				return $http.post(CONSTANTS.saveEmployee, employeeDto);
-
+				}
 			}
 
 			return service;
